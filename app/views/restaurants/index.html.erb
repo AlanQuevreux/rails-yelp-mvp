@@ -1,0 +1,11 @@
+<h1>All Restaurants</h1>
+
+<ul class="list-group list-group-flush">
+  <% @restaurants.each do |restaurant| %>
+    <li class="list-group-item"><%= restaurant.name %> <%= link_to "See details", restaurant_path(restaurant), class: "btn btn-primary" %></li>
+  <% end %>
+</ul>
+
+ <%= link_to new_restaurant_path do %>
+    <i class="fa-solid fa-plus"></i> Add a new restaurant
+  <% end %>
